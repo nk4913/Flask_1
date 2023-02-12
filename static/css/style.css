@@ -1,0 +1,22 @@
+
+body{
+
+	
+	
+	background-repeat: no-repeat;
+	color: white;
+	opacity: 0.7;
+	background-size: cover;	
+
+}
+
+#bg{
+	opacity: 0.6;
+	background-size: cover;
+}
+
+#para{
+/*	display: flex;*/
+	color: red;
+/*	background-color: black;*/
+}
