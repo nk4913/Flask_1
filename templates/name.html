@@ -1,5 +1,6 @@
-{% extends 'base.html'%} {% block content %} {% for message in
-get_flashed_messages() %}
+{% extends 'base.html'%} 
+{% block content %} 
+{% for message in get_flashed_messages() %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
 	{{ message }}
   <button
@@ -22,18 +23,22 @@ get_flashed_messages() %}
 
 {% if name%}
 
-<h1 class="m-5">Hello {{ name }} of {{ age }} years old!!</h1>
+<h1 class="m-5" id="header">Hello {{ name }} of {{ age }} years old!!</h1>
+<br/>
+<img src="{{url_for('static',filename='images/1.png')}}" id="img_1">
 {% else %}
 <!-- <h1>What's your name?</h1> -->
 <br />
 <form method="POST" class="m-5">
-  {{form.hidden_tag() }} {{ form.name.label(class="form-label justify-content")
-  }} {{ form.name(class="form-control justify-content") }}
+  {{form.hidden_tag() }} 
+  {{ form.name.label(class="form-label justify-content" , id="header") }} 
+  {{ form.name(class="form-control justify-content") }}
   <br />
-  {{ form.age.label(class="form-label justify-content") }} {{
-  form.age(class="form-control justify-content") }}
+  {{ form.age.label(class="form-label justify-content" , id="header") }} 
+  {{ form.age(class="form-control justify-content") }}
   <br />
   {{ form.submit(class="btn btn-primary ") }}
 </form>
 
-{% endif %} {% endblock%} }
+{% endif %} 
+{% endblock%} }
